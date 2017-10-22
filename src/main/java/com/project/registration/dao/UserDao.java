@@ -8,4 +8,6 @@ public interface UserDao {
 
 	public boolean isExit(String username);
 	
+	public User loginUser(String username, String password);
+	
 }

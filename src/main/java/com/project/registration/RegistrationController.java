@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.UUID;
 
-import javax.print.attribute.standard.DateTimeAtCreation;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -58,7 +56,7 @@ public class RegistrationController {
 			u.setPassword(encPass);
 			u.setCreatedAt(new Date());
 			u.setStatus(true);
-			if(!uDao.isExit(u.getUsername())){
+			if(uDao.isExit(u.getUsername()) == false){
 //				insert here to auto login after registraion i.e. uDao.login(u.getUsername, u.getPassword);
 				uDao.addUser(u);
 			}else{

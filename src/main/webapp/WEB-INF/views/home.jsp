@@ -7,7 +7,8 @@
 <body>
 
 	${ error }
-	
+	${ user.username }
+	<br>
 	<input type="button" value="Register" onclick="register()">
 	<input type="button" value="Login" onclick="login()">
 	
