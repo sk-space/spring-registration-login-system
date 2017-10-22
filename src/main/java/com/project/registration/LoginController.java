@@ -4,16 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
-@RequestMapping(value = "/")
-public class HomeController {
+@RequestMapping(value = "/login")
+public class LoginController {
 	
 	@GetMapping
-	public String home() {
-		return "home";
+	public String getLogin(){
+		return "login";
 	}
-	
+
 }
